@@ -35,17 +35,30 @@ public class Produtos {
         return statusVenda;
     }
 
+    public void setNomeProduto(String nomeProduto) {
+        this.nomeProduto = nomeProduto;
+    }
+
+    public void setPrecoProduto(double precoProduto) {
+        this.precoProduto = precoProduto;
+    }
+
     public void setStatusVenda(boolean statusVenda) {
         this.statusVenda = statusVenda;
     }
 
+    public void setQuantidadeProduto(int quantidadeProduto) {
+        this.quantidadeProduto = quantidadeProduto;
+    }
+
     @Override
     public String toString() {
-        return "Produtos\n" +
-                "codProduto= " + codProduto +
-                "\nNome Produto= " + nomeProduto +
-                "\nPreço do Produto= " + precoProduto +
+        return "\n---------Produtos---------\n" +
+                "ID= " + codProduto +
+                "\nNome do Produto= " + nomeProduto +
+                "\nPreço do Produto R$= " + precoProduto +
                 "\nQuantidade Produto= " + quantidadeProduto +
-                "\nStatus da Venda= " + (statusVenda ? "Estoque" : "Vendido");
+                "\nStatus da Venda= " + (statusVenda ? "Vendido" : "No estoque")+
+                "\n";
     }
 }
